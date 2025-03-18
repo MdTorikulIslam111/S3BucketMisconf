@@ -129,7 +129,7 @@ for result, status, full_url in unique_validated_results:
     details = " - ".join(result.split(" - ")[1:]) if " - " in result else ""
     status_text = "VALID" if status else "Access denied or not accessible"
     row_class = "valid" if status else "invalid"
-    html_content += f"""<tr class="{row_class}"><td>{full_url}</td><td>{status_text}</td><td>{details.replace('\n', '<br>')}</td></tr>"""
+    html_content += f"""<tr class="{row_class}"><td>{full_url}</td><td>{status_text}</td><td>{details.replace('\\n', '<br>')}</td></tr>"""
 
 html_content += """
     </table>
